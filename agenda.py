@@ -1,5 +1,5 @@
 # Agenda telefónica
-# v0.1 por Jose Vicente Carratala
+# v1.0
 
 import modulos
 
