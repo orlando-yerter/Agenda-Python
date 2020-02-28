@@ -5,7 +5,7 @@ import modulos
 def listar(fin):
     agenda = open("agendatelefonica.csv")
     numero = 0
-    for i in range(1,fin):
+    for i in range(0,fin):# ponemos el cero asi listara la cantidad q indiquemos en el entry
         lectura = agenda.readline()
         #print(lectura.replace(",","\t\t"))
         lista.insert(END,lectura.replace(",","  "))
