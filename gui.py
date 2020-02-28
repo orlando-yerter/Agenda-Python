@@ -1,11 +1,11 @@
 from tkinter import *
-import modulos
+#import modulos
 
 #funcion inserta elemento en un caja de texto
 def listar(fin):
     agenda = open("agendatelefonica.csv")
     numero = 0
-    for i in range(1,fin):
+    for i in range(0,fin):
         lectura = agenda.readline()
         #print(lectura.replace(",","\t\t"))
         lista.insert(END,lectura.replace(",","  "))
@@ -30,10 +30,10 @@ autor.pack(side=TOP,padx=10,pady=10)
 
 #botones y eventos(command mas lambda permite pasar parametros al metodo de otro modulo)
 #Entry.get() obtiene el dato de un input
-'''
-btn1 = Button(f,text="Listar",command=lambda:modulos.listar(int(Entry.get(campo))))
-btn1.pack(side=BOTTOM,padx=10,pady=10)
-'''
+""" btn2 para salir de la app de manera facil"""
+btn2 = Button(f,text="salir",command=quit)
+btn2.pack(side=BOTTOM,padx=10,pady=10)
+
 btn1 = Button(f,text="Listar Elementos",command=lambda:listar(int(Entry.get(campo))))
 btn1.pack(side=BOTTOM,padx=10,pady=10)
 
